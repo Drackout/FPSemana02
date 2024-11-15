@@ -1,28 +1,18 @@
-
-
-
-
-
-
 Word1 = input()
 Word2 = input()
 
-intersection =""
+interWord =""
 
-#Criar set
-SetPalavras = set()
+SetPalavra1 = set()
+SetPalavra2 = set()
 
 for i in Word1:
-    for j in Word2:
-        if i == j:
-            SetPalavras.add(i)
+    SetPalavra1.add(i)
 
-for k in SetPalavras:
-    intersection += k
+for j in Word2:
+    SetPalavra2.add(j)
 
+for k in SetPalavra1.intersection(SetPalavra2):
+    interWord += k
 
-
-print(SetPalavras)
-print(intersection)
-
-
+print(interWord)
